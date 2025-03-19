@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Dashboard - HomeFindr</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard">
+  <header class="dashboard-header">
+    <h1>HomeFindr</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="user-info">
+        <div class="avatar">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="User Avatar">
+        </div>
+        <h3>Sarah Johnson</h3>
+        <p>Seller</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#my-listings" class="active">My Listings</a></li>
+          <li><a href="#add-property">Add Property</a></li>
+          <li><a href="#messages">Messages</a></li>
+          <li><a href="#interested-buyers">Interested Buyers</a></li>
+          <li><a href="#statistics">Statistics</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="dashboard-content">
+      <section id="my-listings" class="dashboard-section active">
+        <h2>My Property Listings</h2>
+        <div class="property-grid">
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+            <div class="property-info">
+              <h3>Lakefront Cottage</h3>
+              <p class="property-price">$395,000</p>
+              <p>2 Beds | 1 Bath | 1,200 sqft</p>
+              <p>456 Lake Road, Waterside</p>
+              <div class="property-status">
+                <span class="status active">Active</span>
+                <span class="views">24 views this week</span>
+              </div>
+              <div class="property-actions">
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+            <div class="property-info">
+              <h3>City Townhouse</h3>
+              <p class="property-price">$520,000</p>
+              <p>3 Beds | 2.5 Baths | 1,800 sqft</p>
+              <p>321 Urban Lane, Metro City</p>
+              <div class="property-status">
+                <span class="status pending">Pending Approval</span>
+                <span class="views">8 views this week</span>
+              </div>
+              <div class="property-actions">
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="add-property" class="dashboard-section">
+        <h2>Add New Property</h2>
+        <form class="property-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="property-title">Property Title</label>
+              <input type="text" id="property-title" placeholder="e.g. Modern Family Home">
+            </div>
+            <div class="form-group">
+              <label for="property-type">Property Type</label>
+              <select id="property-type">
+                <option value="">Select Type</option>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="condo">Condo</option>
+                <option value="townhouse">Townhouse</option>
+                <option value="land">Land</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="property-price">Price ($)</label>
+              <input type="number" id="property-price" placeholder="e.g. 450000">
+            </div>
+            <div class="form-group">
+              <label for="property-status">Status</label>
+              <select id="property-status">
+                <option value="for-sale">For Sale</option>
+                <option value="for-rent">For Rent</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="property-bedrooms">Bedrooms</label>
+              <input type="number" id="property-bedrooms" min="0" placeholder="e.g. 3">
+            </div>
+            <div class="form-group">
+              <label for="property-bathrooms">Bathrooms</label>
+              <input type="number" id="property-bathrooms" min="0" step="0.5" placeholder="e.g. 2">
+            </div>
+            <div class="form-group">
+              <label for="property-area">Area (sqft)</label>
+              <input type="number" id="property-area" min="0" placeholder="e.g. 1800">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="property-address">Address</label>
+            <input type="text" id="property-address" placeholder="Street Address">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="property-city">City</label>
+              <input type="text" id="property-city" placeholder="City">
+            </div>
+            <div class="form-group">
+              <label for="property-state">State/Province</label>
+              <input type="text" id="property-state" placeholder="State/Province">
+            </div>
+            <div class="form-group">
+              <label for="property-zip">Zip/Postal Code</label>
+              <input type="text" id="property-zip" placeholder="Zip/Postal Code">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="property-description">Description</label>
+            <textarea id="property-description" rows="4" placeholder="Describe your property..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="property-images">Upload Images</label>
+            <input type="file" id="property-images" multiple accept="image/*">
+            <p class="help-text">Upload up to 10 images of your property. First image will be the main image.</p>
+          </div>
+          
+          <div class="form-group">
+            <label>Features</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="features" value="garage"> Garage</label>
+              <label><input type="checkbox" name="features" value="garden"> Garden</label>
+              <label><input type="checkbox" name="features" value="pool"> Swimming Pool</label>
+              <label><input type="checkbox" name="features" value="fireplace"> Fireplace</label>
+              <label><input type="checkbox" name="features" value="air-conditioning"> Air Conditioning</label>
+              <label><input type="checkbox" name="features" value="balcony"> Balcony</label>
+              <label><input type="checkbox" name="features" value="gym"> Gym</label>
+              <label><input type="checkbox" name="features" value="security"> Security System</label>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn-submit">Submit Property</button>
+        </form>
+      </section>
+      
+      <section id="messages" class="dashboard-section">
+        <h2>Messages</h2>
+        <div class="messages-container">
+          <div class="message">
+            <div class="message-header">
+              <h4>John Doe (Buyer)</h4>
+              <span class="message-date">March 15, 2025</span>
+            </div>
+            <p class="message-content">I'm interested in your Lakefront Cottage. Is it still available? Can I schedule a viewing this weekend?</p>
+            <div class="message-actions">
+              <button class="btn-reply">Reply</button>
+            </div>
+          </div>
+          <div class="message">
+            <div class="message-header">
+              <h4>Amanda Williams (Buyer)</h4>
+              <span class="message-date">March 12, 2025</span>
+            </div>
+            <p class="message-content">Hello, I have a question about the City Townhouse. Does it come with parking space?</p>
+            <div class="message-actions">
+              <button class="btn-reply">Reply</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="interested-buyers" class="dashboard-section">
+        <h2>Interested Buyers</h2>
+        <table class="buyers-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Property</th>
+              <th>Date</th>
+              <th>Contact</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Lakefront Cottage</td>
+              <td>March 15, 2025</td>
+              <td>john.doe@example.com</td>
+              <td><button class="btn-contact">Contact</button></td>
+            </tr>
+            <tr>
+              <td>Amanda Williams</td>
+              <td>City Townhouse</td>
+              <td>March 12, 2025</td>
+              <td>amanda.w@example.com</td>
+              <td><button class="btn-contact">Contact</button></td>
+            </tr>
+            <tr>
+              <td>Michael Brown</td>
+              <td>Lakefront Cottage</td>
+              <td>March 10, 2025</td>
+              <td>m.brown@example.com</td>
+              <td><button class="btn-contact">Contact</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section id="statistics" class="dashboard-section">
+        <h2>Property Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Views</h3>
+            <div class="stat-value">142</div>
+            <div class="stat-change positive">+24% from last month</div>
+          </div>
+          <div class="stat-card">
+            <h3>Interested Buyers</h3>
+            <div class="stat-value">8</div>
+            <div class="stat-change positive">+3 from last month</div>
+          </div>
+          <div class="stat-card">
+            <h3>Average Time Listed</h3>
+            <div class="stat-value">32 days</div>
+            <div class="stat-change negative">+5 days from average</div>
+          </div>
+          <div class="stat-card">
+            <h3>Offer Conversion</h3>
+            <div class="stat-value">18%</div>
+            <div class="stat-change positive">+2% from average</div>
+          </div>
+        </div>
+        
+        <div class="stats-charts">
+          <div class="chart">
+            <h3>Property Views Over Time</h3>
+            <div class="chart-placeholder">
+              [Chart will appear here in the actual implementation]
+            </div>
+          </div>
+          <div class="chart">
+            <h3>Interested Buyers by Property</h3>
+            <div class="chart-placeholder">
+              [Chart will appear here in the actual implementation]
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="profile" class="dashboard-section">
+        <h2>Profile Settings</h2>
+        <form class="profile-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" value="Sarah Johnson">
+          </div>
+          <div class="form-group">
+            <label for="profile-email">Email</label>
+            <input type="email" id="profile-email" value="sarah.j@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" value="(555) 987-6543">
+          </div>
+          <div class="form-group">
+            <label for="bio">About Me</label>
+            <textarea id="bio">Real estate investor with 5 years of experience. Specializing in residential properties.</textarea>
+          </div>
+          <button type="submit" class="btn-save">Save Changes</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 HomeFindr - Group 16 Project</p>
+  </footer>
+  <script src="../js/auth.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - HomeFindr</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard">
+  <header class="dashboard-header">
+    <h1>HomeFindr</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="user-info">
+        <div class="avatar">
+          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="User Avatar">
+        </div>
+        <h3>Admin User</h3>
+        <p>Administrator</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#dashboard-overview" class="active">Dashboard Overview</a></li>
+          <li><a href="#property-management">Property Management</a></li>
+          <li><a href="#user-management">User Management</a></li>
+          <li><a href="#reported-content">Reported Content</a></li>
+          <li><a href="#system-settings">System Settings</a></li>
+          <li><a href="#admin-profile">Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="dashboard-content">
+      <section id="dashboard-overview" class="dashboard-section active">
+        <h2>Dashboard Overview</h2>
+        <div class="admin-info-banner">
+          <p>Welcome back, Admin! Current time: <span id="current-time">2025-03-19 11:35:22</span></p>
+          <p>System status: <span class="status-ok">All systems operational</span></p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Users</h3>
+            <div class="stat-value">1,458</div>
+            <div class="stat-details">
+              <span>Buyers: 1,124</span>
+              <span>Sellers: 334</span>
+            </div>
+            <div class="stat-change positive">+32 from last week</div>
+          </div>
+          <div class="stat-card">
+            <h3>Active Listings</h3>
+            <div class="stat-value">578</div>
+            <div class="stat-details">
+              <span>Pending approval: 15</span>
+            </div>
+            <div class="stat-change positive">+24 from last week</div>
+          </div>
+          <div class="stat-card">
+            <h3>Messages</h3>
+            <div class="stat-value">2,856</div>
+            <div class="stat-details">
+              <span>Reported: 8</span>
+            </div>
+            <div class="stat-change positive">+215 from last week</div>
+          </div>
+          <div class="stat-card">
+            <h3>Site Traffic</h3>
+            <div class="stat-value">12,542</div>
+            <div class="stat-details">
+              <span>Mobile: 67%</span>
+              <span>Desktop: 33%</span>
+            </div>
+            <div class="stat-change positive">+8% from last week</div>
+          </div>
+        </div>
+        
+        <div class="recent-activity">
+          <h3>Recent Activity</h3>
+          <ul class="activity-list">
+            <li class="activity-item">
+              <div class="activity-time">11:20 AM</div>
+              <div class="activity-description">New property listing submitted by <strong>Sarah Johnson</strong></div>
+              <div class="activity-action"><button class="btn-review">Review</button></div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-time">10:45 AM</div>
+              <div class="activity-description">New user registered: <strong>Michael Rodriguez</strong> (Buyer)</div>
+              <div class="activity-action"><button class="btn-view">View</button></div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-time">09:30 AM</div>
+              <div class="activity-description">Property reported: <strong>City Townhouse</strong> by user <strong>Amanda Williams</strong></div>
+              <div class="activity-action"><button class="btn-review">Review</button></div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-time">Yesterday</div>
+              <div class="activity-description">Maintenance completed: Database optimization</div>
+              <div class="activity-action"><button class="btn-view">View</button></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section id="property-management" class="dashboard-section">
+        <h2>Property Management</h2>
+        <div class="admin-actions">
+          <div class="search-box">
+            <input type="text" placeholder="Search properties...">
+            <button class="btn-search">Search</button>
+          </div>
+          <div class="filter-options">
+            <select>
+              <option value="">All Statuses</option>
+              <option value="active">Active</option>
+              <option value="pending">Pending Approval</option>
+              <option value="reported">Reported</option>
+              <option value="expired">Expired</option>
+            </select>
+          </div>
+        </div>
+        
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Seller</th>
+              <th>Price</th>
+              <th>Posted Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>P1001</td>
+              <td>Lakefront Cottage</td>
+              <td>Sarah Johnson</td>
+              <td>$395,000</td>
+              <td>2025-03-01</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>P1002</td>
+              <td>City Townhouse</td>
+              <td>Sarah Johnson</td>
+              <td>$520,000</td>
+              <td>2025-03-10</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+              </td>
+            </tr>
+            <tr>
+              <td>P1003</td>
+              <td>Modern Villa</td>
+              <td>Robert Chen</td>
+              <td>$750,000</td>
+              <td>2025-02-15</td>
+              <td><span class="status reported">Reported</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-review">Review</button>
+                <button class="btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>P1004</td>
+              <td>Downtown Apartment</td>
+              <td>Jennifer Smith</td>
+              <td>$285,000</td>
+              <td>2025-03-05</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="pagination">
+          <button class="btn-prev">Previous</button>
+          <div class="page-numbers">
+            <span class="current">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>...</span>
+            <span>10</span>
+          </div>
+          <button class="btn-next">Next</button>
+        </div>
+      </section>
+      
+      <section id="user-management" class="dashboard-section">
+        <h2>User Management</h2>
+        <div class="admin-actions">
+          <div class="search-box">
+            <input type="text" placeholder="Search users...">
+            <button class="btn-search">Search</button>
+          </div>
+          <div class="filter-options">
+            <select>
+              <option value="">All User Types</option>
+              <option value="buyer">Buyers</option>
+              <option value="seller">Sellers</option>
+              <option value="admin">Admins</option>
+            </select>
+          </div>
+        </div>
+        
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Type</th>
+              <th>Joined Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>U1001</td>
+              <td>John Doe</td>
+              <td>john.doe@example.com</td>
+              <td>Buyer</td>
+              <td>2025-01-15</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-suspend">Suspend</button>
+              </td>
+            </tr>
+            <tr>
+              <td>U1002</td>
+              <td>Sarah Johnson</td>
+              <td>sarah.j@example.com</td>
+              <td>Seller</td>
+              <td>2025-02-01</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-suspend">Suspend</button>
+              </td>
+            </tr>
+            <tr>
+              <td>U1003</td>
+              <td>Michael Rodriguez</td>
+              <td>m.rodriguez@example.com</td>
+              <td>Buyer</td>
+              <td>2025-03-19</td>
+              <td><span class="status pending">Pending Verification</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-verify">Verify</button>
+                <button class="btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>U1004</td>
+              <td>Amanda Williams</td>
+              <td>amanda.w@example.com</td>
+              <td>Buyer</td>
+              <td>2025-02-20</td>
+              <td><span class="status suspended">Suspended</span></td>
+              <td>
+                <button class="btn-view">View</button>
+                <button class="btn-reactivate">Reactivate</button>
+                <button class="btn-delete">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="pagination">
+          <button class="btn-prev">Previous</button>
+          <div class="page-numbers">
+            <span class="current">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>...</span>
+            <span>15</span>
+          </div>
+          <button class="btn-next">Next</button>
+        </div>
+      </section>
+      
+      <section id="reported-content" class="dashboard-section">
+        <h2>Reported Content</h2>
+        <div class="report-grid">
+          <div class="report-card">
+            <div class="report-header">
+              <h3>Property Report: Modern Villa (P1003)</h3>
+              <span class="report-date">2025-03-18</span>
+            </div>
+            <div class="report-info">
+              <p><strong>Reported by:</strong> Amanda Williams</p>
+              <p><strong>Reason:</strong> Inaccurate information</p>
+              <p><strong>Details:</strong> The property claims to have a swimming pool, but the images show no pool on the property.</p>
+            </div>
+            <div class="report-actions">
+              <button class="btn-view">View Property</button>
+              <button class="btn-contact">Contact Reporter</button>
+              <button class="btn-resolve">Mark as Resolved</button>
+              <button class="btn-delete">Remove Listing</button>
+            </div>
+          </div>
+          
+          <div class="report-card">
+            <div class="report-header">
+              <h3>Message Report: Conversation #M2045</h3>
+              <span class="report-date">2025-03-17</span>
+            </div>
+            <div class="report-info">
+              <p><strong>Reported by:</strong> John Doe</p>
+              <p><strong>Reason:</strong> Spam/Scam</p>
+              <p><strong>Details:</strong> User is requesting payment outside of platform for property tours.</p>
+            </div>
+            <div class="report-actions">
+              <button class="btn-view">View Messages</button>
+              <button class="btn-contact">Contact Reporter</button>
+              <button class="btn-resolve">Mark as Resolved</button>
+              <button class="btn-delete">Delete Messages</button>
+            </div>
+          </div>
+          
+          <div class="report-card">
+            <div class="report-header">
+              <h3>User Report: Emily Parker (U1025)</h3>
+              <span class="report-date">2025-03-15</span>
+            </div>
+            <div class="report-info">
+              <p><strong>Reported by:</strong> Multiple Users</p>
+              <p><strong>Reason:</strong> Suspicious activity</p>
+              <p><strong>Details:</strong> User has posted multiple fake listings with stock photos.</p>
+            </div>
+            <div class="report-actions">
+              <button class="btn-view">View User</button>
+              <button class="btn-contact">Contact Reporter</button>
+              <button class="btn-resolve">Mark as Resolved</button>
+              <button class="btn-suspend">Suspend User</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="system-settings" class="dashboard-section">
+        <h2>System Settings</h2>
+        <div class="settings-grid">
+          <div class="settings-card">
+            <h3>General Settings</h3>

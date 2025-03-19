@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Dashboard - HomeFindr</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard">
+  <header class="dashboard-header">
+    <h1>HomeFindr</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="user-info">
+        <div class="avatar">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Avatar">
+        </div>
+        <h3>John Doe</h3>
+        <p>Buyer</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#saved-properties" class="active">Saved Properties</a></li>
+          <li><a href="#messages">Messages</a></li>
+          <li><a href="#property-alerts">Property Alerts</a></li>
+          <li><a href="#schedule-viewings">Schedule Viewings</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="dashboard-content">
+      <section id="saved-properties" class="dashboard-section active">
+        <h2>Saved Properties</h2>
+        <div class="property-grid">
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+            <div class="property-info">
+              <h3>Modern Villa</h3>
+              <p class="property-price">$750,000</p>
+              <p>3 Beds | 2 Baths | 2,100 sqft</p>
+              <p>123 Main Street, Anytown</p>
+              <div class="property-actions">
+                <button class="btn-view">View Details</button>
+                <button class="btn-remove">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+            <div class="property-info">
+              <h3>Downtown Apartment</h3>
+              <p class="property-price">$285,000</p>
+              <p>1 Bed | 1 Bath | 850 sqft</p>
+              <p>789 Urban Street, Metro City</p>
+              <div class="property-actions">
+                <button class="btn-view">View Details</button>
+                <button class="btn-remove">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="messages" class="dashboard-section">
+        <h2>Messages</h2>
+        <div class="messages-container">
+          <div class="message">
+            <div class="message-header">
+              <h4>Jane Smith (Agent)</h4>
+              <span class="message-date">March 15, 2025</span>
+            </div>
+            <p class="message-content">Hi John, I received your inquiry about the Modern Villa. Would you like to schedule a viewing this weekend?</p>
+            <div class="message-actions">
+              <button class="btn-reply">Reply</button>
+            </div>
+          </div>
+          <div class="message">
+            <div class="message-header">
+              <h4>Mike Johnson (Seller)</h4>
+              <span class="message-date">March 10, 2025</span>
+            </div>
+            <p class="message-content">Thank you for your interest in my property. I've answered your questions about the renovation history in the attachment.</p>
+            <div class="message-actions">
+              <button class="btn-reply">Reply</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="profile" class="dashboard-section">
+        <h2>Profile Settings</h2>
+        <form class="profile-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" value="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="profile-email">Email</label>
+            <input type="email" id="profile-email" value="john.doe@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" value="(555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label for="preferences">Property Preferences</label>
+            <textarea id="preferences">Looking for a 3-bedroom house in the suburbs with a garden and garage.</textarea>
+          </div>
+          <button type="submit" class="btn-save">Save Changes</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 HomeFindr - Group 16 Project</p>
+  </footer>
+  <script src="../js/auth.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -3,29 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Group 16 Ideal Site</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>HomeFindr - Your Real Estate Marketplace</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
-    <h1>Welcome to Our Ideal Site</h1>
+    <h1>HomeFindr</h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Listings</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.html" class="btn-login">Login</a></li>
+        <li><a href="register.html" class="btn-register">Register</a></li>
       </ul>
     </nav>
   </header>
+  
   <main>
-    <section>
-      <h2>Introduction</h2>
-      <p>This is the starting point of our project. We plan to build an interactive and visually appealing website based on our project plan.</p>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Find Your Dream Home</h2>
+        <p>Browse through thousands of properties and find the perfect match for you</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter location, property type...">
+          <button>Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-properties">
+      <h2>Featured Properties</h2>
+      <div class="property-grid">
+        <div class="property-card">
+          <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+          <div class="property-info">
+            <h3>Modern Villa</h3>
+            <p class="property-price">$750,000</p>
+            <p>3 Beds | 2 Baths | 2,100 sqft</p>
+            <p>123 Main Street, Anytown</p>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+          <div class="property-info">
+            <h3>Lakefront Cottage</h3>
+            <p class="property-price">$395,000</p>
+            <p>2 Beds | 1 Bath | 1,200 sqft</p>
+            <p>456 Lake Road, Waterside</p>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+          <div class="property-info">
+            <h3>Downtown Apartment</h3>
+            <p class="property-price">$285,000</p>
+            <p>1 Bed | 1 Bath | 850 sqft</p>
+            <p>789 Urban Street, Metro City</p>
+            <button class="btn-view">View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About HomeFindr</h2>
+      <p>HomeFindr is your trusted partner in finding the perfect property. Whether you're looking to buy, sell, or rent, our platform connects you with the best opportunities in the market.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
+  
   <footer>
-    <p>&copy; 2025 Group 16</p>
+    <p>&copy; 2025 HomeFindr - Group 16 Project</p>
   </footer>
   <script src="js/script.js"></script>
 </body>
