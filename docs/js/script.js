@@ -122,12 +122,18 @@ function updateFooterYear() {
 function initializePropertyCards() {
   const viewButtons = document.querySelectorAll('.btn-view');
   
-  viewButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      const card = e.target.closest('.property-card');
-      const propertyTitle = card.querySelector('h3').textContent;
-      alert(`You clicked on ${propertyTitle}. In a real implementation, this would take you to the property details page.`);
-    });
+  card.addEventListener('click', (e) => {
+    // Only handle clicks on the card itself, not on the View Details button
+    if (!e.target.closest('.btn-view')) {
+      const viewButton = card.querySelector('.btn-view');
+      if (viewButton) {
+        // This just adds some visual feedback when clicking the card itself
+        card.classList.add('card-clicked');
+        setTimeout(() => {
+          window.location.href = viewButton.getAttribute('href');
+        }, 150);
+      }
+    }
   });
 }
 
