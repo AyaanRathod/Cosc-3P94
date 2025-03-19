@@ -9,6 +9,8 @@
   /* Property Gallery */
   .property-gallery {
     margin-bottom: 30px;
+    margin-top: 10px; /* Add spacing after the header */
+    padding-top: 10px; /* Additional padding for smoother appearance */
   }
   
   .slider-container {
