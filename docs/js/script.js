@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeMobileMenu();
 
   initializeChat();
+
+  initializeImageSlider();
 });
 
 
@@ -127,6 +129,85 @@ function initializePropertyCards() {
       alert(`You clicked on ${propertyTitle}. In a real implementation, this would take you to the property details page.`);
     });
   });
+}
+
+function initializeImageSlider() {
+  const slides = document.querySelectorAll('.slide');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const prevButton = document.getElementById('prevSlide');
+  const nextButton = document.getElementById('nextSlide');
+  
+  if (!slides.length || !thumbnails.length) return;
+  
+  let currentIndex = 0;
+  const maxIndex = slides.length - 1;
+  
+  // Initialize
+  updateSlider();
+  
+  // Navigation buttons
+  prevButton.addEventListener('click', () => {
+    currentIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+    updateSlider();
+  });
+  
+  nextButton.addEventListener('click', () => {
+    currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+    updateSlider();
+  });
+  
+  // Thumbnail navigation
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      currentIndex = parseInt(thumbnail.dataset.index);
+      updateSlider();
+    });
+  });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      currentIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+      updateSlider();
+    } else if (e.key === 'ArrowRight') {
+      currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+      updateSlider();
+    }
+  });
+  
+  // Auto-advance slides every 5 seconds
+  let slideInterval = setInterval(() => {
+    currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+    updateSlider();
+  }, 5000);
+  
+  // Pause auto-advancement when hovering over slider
+  const sliderContainer = document.querySelector('.slider-container');
+  sliderContainer.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+  });
+  
+  sliderContainer.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(() => {
+      currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+      updateSlider();
+    }, 5000);
+  });
+  
+  // Function to update active slide and thumbnail
+  function updateSlider() {
+    // Update slides
+    slides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+    slides[currentIndex].classList.add('active');
+    
+    // Update thumbnails
+    thumbnails.forEach(thumbnail => {
+      thumbnail.classList.remove('active');
+    });
+    thumbnails[currentIndex].classList.add('active');
+  }
 }
 
 // Initialize search functionality
