@@ -16,7 +16,84 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeContactForm();
 
   initializeMobileMenu();
+
+  initializeChat();
 });
+
+
+function initializeChat() {
+  const chatButton = document.getElementById('chatButton');
+  const chatDialog = document.getElementById('chatDialog');
+  const chatClose = document.getElementById('chatClose');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+  const chatMessages = document.getElementById('chatMessages');
+  
+  // Pre-defined AI responses for real estate
+  const aiResponses = [
+    "I can help you find properties that match your criteria. What area are you interested in?",
+    "Our newest listings are in downtown and the eastern suburbs. Would you like to see those?",
+    "You can filter properties by bedrooms, bathrooms, and price range using our search filters above.",
+    "Most of our properties offer virtual tours. Would you like me to show you how to access them?",
+    "The average price per square foot in that area is around $250-300.",
+    "We have several financing options available. Would you like to speak with one of our agents about mortgage pre-approval?",
+    "I recommend checking out our featured properties section for the best deals currently available."
+  ];
+  
+  // Toggle chat dialog
+  chatButton.addEventListener('click', () => {
+    chatDialog.style.display = 'flex';
+    chatButton.style.display = 'none';
+  });
+  
+  chatClose.addEventListener('click', () => {
+    chatDialog.style.display = 'none';
+    chatButton.style.display = 'flex';
+  });
+  
+  // Send message function
+  function sendMessage() {
+    const message = chatInput.value.trim();
+    if (message) {
+      // Add user message
+      addMessage(message, 'user');
+      chatInput.value = '';
+      
+      // Simulate AI thinking with delay
+      setTimeout(() => {
+        // Get random AI response
+        const aiResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
+        addMessage(aiResponse, 'ai');
+      }, 1000);
+    }
+  }
+  
+  // Add message to chat
+  function addMessage(text, sender) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('message', sender);
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.classList.add('message-content');
+    contentDiv.textContent = text;
+    
+    messageDiv.appendChild(contentDiv);
+    chatMessages.appendChild(messageDiv);
+    
+    // Scroll to bottom
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+  
+  // Event listeners for sending messages
+  chatSend.addEventListener('click', sendMessage);
+  
+  chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
+}
+
 
 
 // Initialize mobile menu toggle

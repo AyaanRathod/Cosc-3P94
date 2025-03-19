@@ -130,6 +130,35 @@
   <footer>
     <p>&copy; 2025 HomeFindr - Group 16 Project</p>
   </footer>
+
+  <!-- Floating AI Chat Button and Dialog -->
+  <div class="chat-container">
+    <button class="chat-button" id="chatButton">
+      <i class="fas fa-comments"></i>
+    </button>
+    
+    <div class="chat-dialog" id="chatDialog">
+      <div class="chat-header">
+        <h3><i class="fas fa-robot"></i> HomeFindr AI Assistant</h3>
+        <button class="chat-close" id="chatClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message ai">
+          <div class="message-content">Hello! I'm HomeFindr's AI assistant. How can I help you with your property search today?</div>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button id="chatSend">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
   <script src="js/script.js"></script>
+  
 </body>
 </html>
