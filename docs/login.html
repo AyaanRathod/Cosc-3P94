@@ -5,18 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - HomeFindr</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>HomeFindr</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="register.html">Register</a></li>
-      </ul>
-    </nav>
+    <div class="container header-container">
+      <div class="logo-container">
+        <i class="fas fa-home logo-icon"></i>
+        <h1>HomeFindr</h1>
+      </div>
+      
+      <nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active"><i class="fas fa-house"></i> Home</a></li>
+          <li><a href="#properties"><i class="fas fa-building"></i> Properties</a></li>
+          <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="login.html" class="btn-login">Login</a>
+          <a href="register.html" class="btn-register">Register</a>
+        </div>
+      </nav>
+    </div>
   </header>
-  
+
   <main>
     <section class="auth-container">
       <div class="auth-form">
@@ -42,6 +58,61 @@
         </form>
         <p class="auth-redirect">Don't have an account? <a href="register.html">Register here</a></p>
       </div>
+      
+      <!-- Demo Credentials Box -->
+      <div class="demo-credentials">
+        <h3><i class="fas fa-info-circle"></i> Demo Accounts</h3>
+        
+        <div class="demo-account buyer">
+          <h4><i class="fas fa-user"></i> Buyer Account</h4>
+          <div class="credential-item">
+            <span class="credential-label">Email:</span>
+            <span class="credential-value">john.doe@example.com</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Password:</span>
+            <span class="credential-value">password123</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Type:</span>
+            <span class="credential-value">buyer</span>
+          </div>
+        </div>
+        
+        <div class="demo-account seller">
+          <h4><i class="fas fa-home"></i> Seller Account</h4>
+          <div class="credential-item">
+            <span class="credential-label">Email:</span>
+            <span class="credential-value">sarah.j@example.com</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Password:</span>
+            <span class="credential-value">password123</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Type:</span>
+            <span class="credential-value">seller</span>
+          </div>
+        </div>
+        
+        <div class="demo-account admin">
+          <h4><i class="fas fa-user-shield"></i> Admin Account</h4>
+          <div class="credential-item">
+            <span class="credential-label">Email:</span>
+            <span class="credential-value">admin@homefindr.com</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Password:</span>
+            <span class="credential-value">admin123</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Type:</span>
+            <span class="credential-value">admin</span>
+          </div>
+        </div>
+        
+        <p class="demo-note">Note: These are demo accounts for testing the different user interfaces. In a production environment, these would not be visible.</p>
+      </div>
     </section>
   </main>
   
@@ -49,5 +120,6 @@
     <p>&copy; 2025 HomeFindr - Group 16 Project</p>
   </footer>
   <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
