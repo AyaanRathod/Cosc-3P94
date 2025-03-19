@@ -53,16 +53,43 @@ function initializePropertyCards() {
 }
 
 // Initialize search functionality
+// Update your initializeSearch function
 function initializeSearch() {
-  const searchForm = document.querySelector('.search-bar');
-  if (searchForm) {
-    searchForm.addEventListener('submit', (e) => {
+  const searchButton = document.querySelector('.search-button');
+  const locationInput = document.querySelector('.location-input');
+  const filterSelects = document.querySelectorAll('.filter-select');
+  
+  if (searchButton) {
+    searchButton.addEventListener('click', (e) => {
       e.preventDefault();
-      const searchInput = searchForm.querySelector('input').value;
-      if (searchInput.trim()) {
-        alert(`You searched for: "${searchInput}". In a real implementation, this would show search results.`);
+      const location = locationInput.value.trim();
+      
+      // Collect filter values
+      let filterValues = {};
+      filterSelects.forEach(select => {
+        const filterType = select.options[0].text.toLowerCase().split(' ')[0];
+        const value = select.value;
+        if (value) {
+          filterValues[filterType] = value;
+        }
+      });
+      
+      // Show search parameters in an alert (in a real app, this would perform a search)
+      if (location || Object.keys(filterValues).length > 0) {
+        let searchMsg = 'Searching for properties';
+        if (location) searchMsg += ` in "${location}"`;
+        
+        if (Object.keys(filterValues).length > 0) {
+          searchMsg += ' with filters: ';
+          for (const [key, value] of Object.entries(filterValues)) {
+            searchMsg += `${key}: ${value}, `;
+          }
+          searchMsg = searchMsg.slice(0, -2); // Remove trailing comma and space
+        }
+        
+        alert(searchMsg);
       } else {
-        alert('Please enter a search term.');
+        alert('Please enter a location or select at least one filter.');
       }
     });
   }
