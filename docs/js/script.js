@@ -14,8 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize contact form
   initializeContactForm();
+
+  initializeMobileMenu();
 });
 
+
+// Initialize mobile menu toggle
+function initializeMobileMenu() {
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('show');
+    });
+  }
+}
 // Update footer year
 function updateFooterYear() {
   const footerYear = document.querySelector('footer p');
