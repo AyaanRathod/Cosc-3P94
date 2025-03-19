@@ -122,19 +122,7 @@ function updateFooterYear() {
 function initializePropertyCards() {
   const viewButtons = document.querySelectorAll('.btn-view');
   
-  card.addEventListener('click', (e) => {
-    // Only handle clicks on the card itself, not on the View Details button
-    if (!e.target.closest('.btn-view')) {
-      const viewButton = card.querySelector('.btn-view');
-      if (viewButton) {
-        // This just adds some visual feedback when clicking the card itself
-        card.classList.add('card-clicked');
-        setTimeout(() => {
-          window.location.href = viewButton.getAttribute('href');
-        }, 150);
-      }
-    }
-  });
+  
 }
 
 function initializeImageSlider() {
