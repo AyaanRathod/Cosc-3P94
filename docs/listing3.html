@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downtown Apartment - Property Listing | HomeFindr</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/property-listing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <i class="fas fa-home logo-icon"></i>
+                    <h1>HomeFindr</h1>
+                </a>
+            </div>
+            
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+                    <li><a href="#properties"><i class="fas fa-building"></i> Properties</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="register.html" class="btn-register">Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="property-gallery">
+        <div class="slider-container">
+            <div class="main-slider">
+                <div class="slider-arrows">
+                    <button class="arrow arrow-left" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="arrow arrow-right" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="slides-wrapper">
+                    <div class="slide active" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Downtown Apartment Exterior">
+                        <div class="slide-counter">1/5</div>
+                    </div>
+                    <div class="slide" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Downtown Apartment Living Room">
+                        <div class="slide-counter">2/5</div>
+                    </div>
+                    <div class="slide" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1545083036-61d13da23934?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Downtown Apartment Kitchen">
+                        <div class="slide-counter">3/5</div>
+                    </div>
+                    <div class="slide" data-index="3">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Downtown Apartment Bedroom">
+                        <div class="slide-counter">4/5</div>
+                    </div>
+                    <div class="slide" data-index="4">
+                        <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Downtown Apartment Bathroom">
+                        <div class="slide-counter">5/5</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="thumbnail-grid">
+                <div class="thumbnail active" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Downtown Apartment Exterior">
+                </div>
+                <div class="thumbnail" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Downtown Apartment Living Room">
+                </div>
+                <div class="thumbnail" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Downtown Apartment Bedroom">
+                </div>
+                <div class="thumbnail" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Downtown Apartment Bathroom">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main class="property-listing">
+        <div class="property-header">
+            <div class="property-title">
+                <h1>Downtown Apartment</h1>
+                <p class="property-address">789 Urban Street, Metro City</p>
+            </div>
+            <div class="property-price">
+                <h2>$285,000</h2>
+                <div class="actions">
+                    <button class="btn-save"><i class="far fa-heart"></i> Save</button>
+                    <button class="btn-share"><i class="fas fa-share-alt"></i> Share</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="property-highlights">
+            <div class="highlight">
+                <i class="fas fa-bed"></i>
+                <span>1 Bedroom</span>
+            </div>
+            <div class="highlight">
+                <i class="fas fa-bath"></i>
+                <span>1 Bathroom</span>
+            </div>
+            <div class="highlight">
+                <i class="fas fa-ruler-combined"></i>
+                <span>850 sqft</span>
+            </div>
+            <div class="highlight">
+                <i class="fas fa-building"></i>
+                <span>Apartment</span>
+            </div>
+            <div class="highlight">
+                <i class="fas fa-car"></i>
+                <span>1 Parking Space</span>
+            </div>
+            <div class="highlight">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Built in 2018</span>
+            </div>
+        </div>
+        
+        <div class="property-content">
+            <div class="property-main">
+                <section class="property-description">
+                    <h3>About this property</h3>
+                    <p>This stylish downtown apartment offers modern urban living in the heart of Metro City. Located in a secure building with premium amenities, this unit features an open concept design with high-end finishes throughout.</p>
+                    <p>The modern kitchen includes stainless steel appliances, quartz countertops, and ample storage. The spacious bedroom has a large closet and en-suite bathroom with custom tile work and a glass shower.</p>
+                    <p>Enjoy stunning city views from your private balcony, perfect for morning coffee or evening relaxation.</p>
+                    
+                    <div class="features-list">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Floor-to-ceiling windows with city views</li>
+                            <li><i class="fas fa-check"></i> Smart home technology throughout</li>
+                            <li><i class="fas fa-check"></i> Premium wood flooring</li>
+                            <li><i class="fas fa-check"></i> In-unit washer and dryer</li>
+                            <li><i class="fas fa-check"></i> Central air conditioning and heating</li>
+                            <li><i class="fas fa-check"></i> Building amenities include gym, rooftop terrace, and 24-hour concierge</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section class="neighborhood">
+                    <h3>Neighborhood</h3>
+                    <div class="neighborhood-content">
+                        <div class="neighborhood-text">
+                            <p>Located in the heart of Metro City, this urban neighborhood offers the perfect blend of convenience and excitement. Residents enjoy:</p>
+                            <ul>
+                                <li><i class="fas fa-utensils"></i> <strong>Dining:</strong> Walking distance to dozens of restaurants, cafes, and bars including Metro Bistro, Urban Spice, and The Coffee House</li>
+                                <li><i class="fas fa-shopping-bag"></i> <strong>Shopping:</strong> Just steps from City Center Mall and boutique shopping district</li>
+                                <li><i class="fas fa-graduation-cap"></i> <strong>Education:</strong> Near Metro City University and Downtown Public Library</li>
+                                <li><i class="fas fa-leaf"></i> <strong>Recreation:</strong> Two blocks from Central Park with walking trails and weekend farmers market</li>
+                                <li><i class="fas fa-bus"></i> <strong>Transportation:</strong> Walk Score of 95, multiple public transit stops, and bike-friendly streets</li>
+                            </ul>
+                        </div>
+                        <div class="neighborhood-map">
+                            <img src="" alt="Neighborhood Map">
+                            <p class="map-caption">Downtown District, Metro City</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="property-sidebar">
+                <div class="agent-card">
+                    <h3>Listed by</h3>
+                    <div class="agent-details">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez" class="agent-photo">
+                        <div class="agent-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Metro City Realty</p>
+                            <p><i class="fas fa-star"></i> 4.8 (37 reviews)</p>
+                            <button class="btn-contact-agent"><i class="fas fa-envelope"></i> Contact Agent</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="schedule-tour">
+                    <h3>Schedule a Tour</h3>
+                    <div class="tour-options">
+                        <button class="tour-option active">
+                            <i class="fas fa-user"></i>
+                            <span>In-Person</span>
+                        </button>
+                        <button class="tour-option">
+                            <i class="fas fa-video"></i>
+                            <span>Video Tour</span>
+                        </button>
+                    </div>
+                    <div class="date-picker">
+                        <div class="date-option">
+                            <input type="radio" id="date1" name="tour-date" checked>
+                            <label for="date1">
+                                <div class="day">Wed</div>
+                                <div class="date">Mar 20</div>
+                            </label>
+                        </div>
+                        <div class="date-option">
+                            <input type="radio" id="date2" name="tour-date">
+                            <label for="date2">
+                                <div class="day">Thu</div>
+                                <div class="date">Mar 21</div>
+                            </label>
+                        </div>
+                        <div class="date-option">
+                            <input type="radio" id="date3" name="tour-date">
+                            <label for="date3">
+                                <div class="day">Fri</div>
+                                <div class="date">Mar 22</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="time-picker">
+                        <select>
+                            <option>10:00 AM</option>
+                            <option>11:30 AM</option>
+                            <option>1:00 PM</option>
+                            <option>2:30 PM</option>
+                            <option>4:00 PM</option>
+                        </select>
+                    </div>
+                    <button class="btn-schedule">Schedule Tour</button>
+                </div>
+                
+                <div class="mortgage-calculator">
+                    <h3>Mortgage Calculator</h3>
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="price">Home Price</label>
+                            <input type="text" id="price" value="$285,000" disabled>
+                        </div>
+                        <div class="input-group">
+                            <label for="down-payment">Down Payment (20%)</label>
+                            <input type="text" id="down-payment" value="$57,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="loan-term">Loan Term</label>
+                            <select id="loan-term">
+                                <option>30-year fixed</option>
+                                <option>15-year fixed</option>
+                                <option>5/1 ARM</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="interest-rate">Interest Rate</label>
+                            <input type="text" id="interest-rate" value="3.5%">
+                        </div>
+                    </div>
+                    <div class="monthly-payment">
+                        <h4>Estimated Monthly Payment</h4>
+                        <div class="payment-amount">$1,158</div>
+                        <div class="payment-details">
+                            <div class="payment-item">
+                                <span>Principal & Interest:</span>
+                                <span>$893</span>
+                            </div>
+                            <div class="payment-item">
+                                <span>Property Taxes:</span>
+                                <span>$165</span>
+                            </div>
+                            <div class="payment-item">
+                                <span>Home Insurance:</span>
+                                <span>$100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="similar-properties">
+            <h2>Featured Properties</h2>
+            <div class="property-grid">
+              <div class="property-card">
+                <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+                <div class="property-info">
+                  <h3>Modern Villa</h3>
+                  <p class="property-price">$750,000</p>
+                  <p>3 Beds | 2 Baths | 2,100 sqft</p>
+                  <p>123 Main Street, Anytown</p>
+                  <a href="property-listing.html" class="btn-view">View Details</a>
+                </div>
+              </div>
+              <div class="property-card">
+                <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+                <div class="property-info">
+                  <h3>Lakefront Cottage</h3>
+                  <p class="property-price">$395,000</p>
+                  <p>2 Beds | 1 Bath | 1,200 sqft</p>
+                  <p>456 Lake Road, Waterside</p>
+                  <a href="listing2.html" class="btn-view" >View Details</a>
+                </div>
+              </div>
+              <div class="property-card">
+                <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+                <div class="property-info">
+                  <h3>Downtown Apartment</h3>
+                  <p class="property-price">$285,000</p>
+                  <p>1 Bed | 1 Bath | 850 sqft</p>
+                  <p>789 Urban Street, Metro City</p>
+                  <a href="listing3.html" class="btn-view" >View Details</a>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 HomeFindr - Group 16 Project</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+    <script src="js/property-listing.js"></script>
+</body>
+</html></div>
