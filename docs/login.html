@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Login - HomeFindr</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -53,12 +53,15 @@
             <select id="user-type">
               <option value="buyer">Buyer</option>
               <option value="seller">Seller</option>
+              <option value="broker">Broker</option> <!-- Added Broker option -->
               <option value="admin">Admin</option>
             </select>
           </div>
           <button type="submit" class="btn-login">Login</button>
         </form>
-        <p class="auth-redirect">Don't have an account? <a href="register.html">Register here</a></p>
+        <p class="auth-redirect">
+          Don't have an account? <a href="register.html">Register here</a>
+        </p>
       </div>
       
       <!-- Demo Credentials Box -->
@@ -97,15 +100,32 @@
           </div>
         </div>
         
+        <!-- New Broker Account -->
+        <div class="demo-account broker">
+          <h4><i class="fas fa-user-tie"></i> Broker Account</h4>
+          <div class="credential-item">
+            <span class="credential-label">Email:</span>
+            <span class="credential-value">broker.j@example.com</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Password:</span>
+            <span class="credential-value">password123</span>
+          </div>
+          <div class="credential-item">
+            <span class="credential-label">Type:</span>
+            <span class="credential-value">broker</span>
+          </div>
+        </div>
+
         <div class="demo-account admin">
           <h4><i class="fas fa-user-shield"></i> Admin Account</h4>
           <div class="credential-item">
             <span class="credential-label">Email:</span>
-            <span class="credential-value">admin@homefindr.com</span>
+            <span class="credential-value">admin@example.com</span>
           </div>
           <div class="credential-item">
             <span class="credential-label">Password:</span>
-            <span class="credential-value">admin123</span>
+            <span class="credential-value">password123</span>
           </div>
           <div class="credential-item">
             <span class="credential-label">Type:</span>
@@ -113,15 +133,19 @@
           </div>
         </div>
         
-        <p class="demo-note">Note: These are demo accounts for testing the different user interfaces. In a production environment, these would not be visible.</p>
+        <p class="demo-note">
+          Note: These are demo accounts for testing the different user roles.
+          In a production environment, you would not expose credentials like this.
+        </p>
       </div>
     </section>
   </main>
-  
+
   <footer>
     <p>&copy; 2025 HomeFindr - Group 16 Project</p>
   </footer>
+  
+  <!-- Link to your JS files as needed -->
   <script src="js/auth.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>

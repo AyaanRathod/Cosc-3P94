@@ -49,6 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
       type: 'admin',
       avatar: 'https://randomuser.me/api/portraits/men/10.jpg',
       joinDate: '2025-01-01'
+    },
+
+    {
+    id: 'u1004',
+    email: 'broker.j@example.com',
+    password: 'password123',
+    name: 'Adam Johnson',
+    type: 'broker',
+    avatar: 'https://randomuser.me/api/portraits/men/11.jpg',
+    joinDate: '2025-02-10'
     }
   ];
   

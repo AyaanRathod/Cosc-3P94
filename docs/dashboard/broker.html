@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broker Dashboard - HomeFindr</title>
+  <!-- Match your existing CSS paths -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <!-- Font Awesome if you use icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard">
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo-container">
+        <a href="../index.html" class="logo-link">
+          <i class="fas fa-home logo-icon"></i>
+          <h1>HomeFindr</h1>
+        </a>
+      </div>
+      
+      <nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../index.html"><i class="fas fa-house"></i> Home</a></li>
+          <li><a href="../index.html#featured-properties"><i class="fas fa-building"></i> Properties</a></li>
+          <li><a href="../index.html#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="../index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="../index.html" class="btn-login">Logout</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Dashboard Container -->
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-info">
+        <div class="avatar">
+          <!-- Broker Avatar -->
+          <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Broker Avatar">
+        </div>
+        <h3>Adam Johnson</h3>
+        <p>Broker</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#managed-properties" class="active">Managed Properties</a></li>
+          <li><a href="#client-messages">Client Messages</a></li>
+          <li><a href="#property-requests">Property Requests</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="dashboard-content">
+      <!-- Managed Properties -->
+      <section id="managed-properties" class="dashboard-section active">
+        <h2>Managed Properties</h2>
+        <div class="property-grid">
+          <div class="property-card">
+            <div class="property-image" 
+                 style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+            </div>
+            <div class="property-info">
+              <h3>Suburban Family Home</h3>
+              <p class="property-price">$425,000</p>
+              <p>4 Beds | 2.5 Baths | 2,300 sqft</p>
+              <p>123 Elm Street, Suburbia</p>
+              <div class="property-actions">
+                <button class="btn-view">View Details</button>
+                <button class="btn-remove">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="property-image" 
+                 style="background-image: url('https://images.unsplash.com/photo-1616593969747-4797dc75033e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+            </div>
+            <div class="property-info">
+              <h3>City Condo</h3>
+              <p class="property-price">$300,000</p>
+              <p>2 Beds | 2 Baths | 1,100 sqft</p>
+              <p>456 Urban Ave, Downtown</p>
+              <div class="property-actions">
+                <button class="btn-view">View Details</button>
+                <button class="btn-remove">Remove</button>
+              </div>
+            </div>
+          </div>
+          <!-- Add more property cards as needed -->
+        </div>
+      </section>
+      
+      <!-- Client Messages -->
+      <section id="client-messages" class="dashboard-section">
+        <h2>Client Messages</h2>
+        <div class="messages-container">
+          <div class="message">
+            <div class="message-header">
+              <h4>Jane Doe (Buyer)</h4>
+              <span class="message-date">March 18, 2025</span>
+            </div>
+            <p class="message-content">
+              Hello Adam, I'm interested in scheduling a viewing for the Suburban Family Home. Please let me know if this weekend works.
+            </p>
+            <div class="message-actions">
+              <button class="btn-reply">Reply</button>
+            </div>
+          </div>
+          <div class="message">
+            <div class="message-header">
+              <h4>Mark Spencer (Seller)</h4>
+              <span class="message-date">March 16, 2025</span>
+            </div>
+            <p class="message-content">
+              Hi Adam, I've made the price change you suggested for the City Condo. Could you update the listing at your earliest convenience?
+            </p>
+            <div class="message-actions">
+              <button class="btn-reply">Reply</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Property Requests -->
+      <section id="property-requests" class="dashboard-section">
+        <h2>Property Requests</h2>
+        <p>List of recent requests from clients or potential buyers.</p>
+        <ul>
+          <li>
+            <strong>Request #101:</strong> Detailed inspection for Suburban Family Home
+            <button class="btn-view">View</button>
+          </li>
+          <li>
+            <strong>Request #102:</strong> Price negotiation query for City Condo
+            <button class="btn-view">View</button>
+          </li>
+        </ul>
+      </section>
+      
+      <!-- Analytics -->
+      <section id="analytics" class="dashboard-section">
+        <h2>Analytics</h2>
+        <p>Coming soon: charts and graphs showing traffic, views, conversions, etc.</p>
+      </section>
+      
+      <!-- Profile -->
+      <section id="profile" class="dashboard-section">
+        <h2>Profile Settings</h2>
+        <form class="profile-form">
+          <div class="form-group">
+            <label for="broker-name">Full Name</label>
+            <input type="text" id="broker-name" value="Adam Johnson">
+          </div>
+          <div class="form-group">
+            <label for="broker-email">Email</label>
+            <input type="email" id="broker-email" value="adam.johnson@example.com">
+          </div>
+          <div class="form-group">
+            <label for="broker-phone">Phone</label>
+            <input type="tel" id="broker-phone" value="(555) 234-5678">
+          </div>
+          <div class="form-group">
+            <label for="broker-bio">Short Bio</label>
+            <textarea id="broker-bio" rows="3">Experienced broker specializing in residential properties.</textarea>
+          </div>
+          <button type="submit" class="btn-save">Save Changes</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HomeFindr - Group 16 Project</p>
+  </footer>
+
+  <!-- JS Files (adjust paths as needed) -->
+  <script src="../js/auth.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html
