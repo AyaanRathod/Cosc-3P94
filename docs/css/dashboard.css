@@ -117,13 +117,20 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    gap: 8px;
   }
   
   .property-actions button {
     flex: 1;
-    margin-right: 5px;
-    padding: 8px;
-    font-size: 0.9rem;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 0;
   }
   
   .property-actions button:last-child {
@@ -621,7 +628,7 @@
   }
   
   .btn-review {
-    background-color: #f39c12;
+    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 4px;
@@ -629,7 +636,7 @@
   }
   
   .btn-review:hover {
-    background-color: #e67e22;
+    background-color: #3498db;
   }
   
   .stats-charts {

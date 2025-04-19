@@ -42,35 +42,75 @@
       <p>Browse through thousands of properties and find the perfect match for you</p>
       <div class="advanced-search">
         <div class="search-row">
-          <input type="text" placeholder="Enter location, neighborhood..." class="location-input">
+          <input type="text" class="location-input" placeholder="Enter location, neighborhood, or address">
         </div>
         <div class="search-filters">
           <select class="filter-select">
             <option value="">Property Type</option>
-            <option value="apartment">Apartment</option>
             <option value="house">House</option>
+            <option value="apartment">Apartment</option>
             <option value="condo">Condo</option>
             <option value="townhouse">Townhouse</option>
-            <option value="villa">Villa</option>
+            <option value="land">Land</option>
+          </select>
+          <select class="filter-select">
+            <option value="">Price Range</option>
+            <option value="0-200000">$0 - $200,000</option>
+            <option value="200000-400000">$200,000 - $400,000</option>
+            <option value="400000-600000">$400,000 - $600,000</option>
+            <option value="600000-800000">$600,000 - $800,000</option>
+            <option value="800000+">$800,000+</option>
           </select>
           <select class="filter-select">
             <option value="">Bedrooms</option>
-            <option value="1">1+ Bed</option>
-            <option value="2">2+ Beds</option>
-            <option value="3">3+ Beds</option>
-            <option value="4">4+ Beds</option>
-            <option value="5">5+ Beds</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+            <option value="5">5+</option>
           </select>
           <select class="filter-select">
-            <option value="">Area (sqft)</option>
-            <option value="500">500+ sqft</option>
-            <option value="1000">1000+ sqft</option>
-            <option value="1500">1500+ sqft</option>
-            <option value="2000">2000+ sqft</option>
-            <option value="3000">3000+ sqft</option>
+            <option value="">Bathrooms</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
           </select>
+          <button class="more-filters-btn" id="moreFiltersToggle">More</button>
+        </div>
+        
+        <div class="extended-filters" id="extendedFilters" style="display: none;">
+          <div class="search-filters extended">
+            <label class="filter-checkbox">
+              <input type="checkbox"> Pet Friendly
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox"> Smoke Free
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox"> Furnished
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox"> Parking
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox"> Wheelchair Access
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox"> Swimming Pool
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox"> Garden/Yard
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox"> New Construction
+            </label>
+          </div>
+        </div>
+        
+        <div class="search-button-row">
           <button class="search-button">
-            <i class="fas fa-search"></i> Search
+            <i class="fas fa-search"></i> Search Properties
           </button>
         </div>
       </div>

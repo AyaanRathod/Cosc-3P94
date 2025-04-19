@@ -210,7 +210,20 @@ function initializeSearch() {
   const searchButton = document.querySelector('.search-button');
   const locationInput = document.querySelector('.location-input');
   const filterSelects = document.querySelectorAll('.filter-select');
+  const moreFiltersToggle = document.getElementById('moreFiltersToggle');
+  const extendedFilters = document.getElementById('extendedFilters');
   
+  if (moreFiltersToggle && extendedFilters) {
+    moreFiltersToggle.addEventListener('click', function() {
+      if (extendedFilters.style.display === 'none') {
+        extendedFilters.style.display = 'block';
+        moreFiltersToggle.textContent = 'Less Filters';
+      } else {
+        extendedFilters.style.display = 'none';
+        moreFiltersToggle.textContent = 'More Filters';
+      }
+    });
+  }
   if (searchButton) {
     searchButton.addEventListener('click', (e) => {
       e.preventDefault();
@@ -225,6 +238,7 @@ function initializeSearch() {
           filterValues[filterType] = value;
         }
       });
+
       
       // Show search parameters in an alert (in a real app, this would perform a search)
       if (location || Object.keys(filterValues).length > 0) {
@@ -266,3 +280,4 @@ function initializeContactForm() {
     });
   }
 }
+
